@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dettagli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="bg-hearts" aria-hidden="true"></div>
+
+  <main class="shell">
+    <section class="card" aria-label="Dettagli">
+      <header class="header">
+        <div class="badge">Pagina 2/3</div>
+        <h1 id="celebrateTitle">Perfetto!</h1>
+        <p class="sub">Ora completiamo il form per il nostro appuntamento.</p>
+      </header>
+
+      <form id="dateForm" class="form">
+        <div class="grid">
+          <label class="field">
+            <span class="label">Giorno</span>
+            <input class="input input-locked" name="day" type="date" required value="2026-02-14" min="2026-02-14" max="2026-02-14" aria-readonly="true" />
+          </label>
+
+          <label class="field">
+            <span class="label">Ora</span>
+            <input class="input input-locked" name="time" type="time" required value="19:00" min="19:00" max="19:00" step="60" aria-readonly="true" />
+          </label>
+        </div>
+
+        <label class="field">
+          <span class="label">Stile serata</span>
+          <select class="input" name="mood" required>
+            <option value="" disabled selected>Scegli…</option>
+            <option>Sushi + Suits (caldamente consigliato)</option>
+            <option>Pizza + film</option>
+            <option>Cinema</option>
+            <option>Ristorante (sconsigliato)</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span class="label">Nota (facoltativa)</span>
+          <textarea class="input" name="note" rows="3" placeholder="Es. piatti desiderati, film consigliato, ecc."></textarea>
+        </label>
+
+        <button class="btn btn-primary" type="submit">Conferma</button>
+      </form>
+
+      <footer class="footer">
+        <a class="link" href="celebrate.html">← Indietro</a>
+      </footer>
+    </section>
+  </main>
+
+  <script src="assets/app.js"></script>
+  <script>
+    window.ValentineApp.initDatePage();
+  </script>
+</body>
+</html>
